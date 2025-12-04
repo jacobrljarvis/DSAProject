@@ -198,9 +198,7 @@ def preprocess_nba_data(filepath, min_games=10, min_minutes=10.0, discretize=Tru
     Returns:
         X (features), y (labels), feature_names, original_df
     """
-    print("="*80)
-    print("NBA DATA PREPROCESSING")
-    print("="*80)
+    print("NBA Data Preprocessing")
     
     # Load data
     print("\n1. Loading data...")
@@ -227,10 +225,8 @@ def preprocess_nba_data(filepath, min_games=10, min_minutes=10.0, discretize=Tru
     print("\n6. Selecting features for classification...")
     X, y, feature_names = select_features_for_classification(df, discretize=discretize, n_bins=n_bins)
     
-    print("\n" + "="*80)
-    print(f"PREPROCESSING COMPLETE")
+    print(f"\nPreprocessing complete")
     print(f"Final dataset: {X.shape[0]} instances, {X.shape[1]} features")
-    print("="*80)
     
     return X, y, feature_names, df
 
